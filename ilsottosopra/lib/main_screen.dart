@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ilsottosopra/assets/account_page.dart';
-import 'package:ilsottosopra/setting_page.dart';
 
+import 'package:ilsottosopra/setting_page.dart';
+import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+
+import 'account_page.dart';
 import 'home_page.dart';
 
 class MainScreen extends StatefulWidget {
