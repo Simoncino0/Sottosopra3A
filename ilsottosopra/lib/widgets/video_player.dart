@@ -25,37 +25,37 @@ class _VideoAppState extends State<VideoApp> {
 
   @override
   Widget build(BuildContext context) {
-    return 
-     
-      
-        Stack(
-          children: [
-            Center(
-              child: _controller.value.isInitialized
-                  ? AspectRatio(
-                      aspectRatio: _controller.value.aspectRatio,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: VideoPlayer(_controller),
-                      ),
-                    )
-                  : Container(),
-            
-            
-  
-    ),FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              _controller.value.isPlaying
-                  ? _controller.pause()
-                  : _controller.play();
-            });
-          },
-          child: Icon(
-            _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
-          ),)
-          ],
-        );
+    return Stack(
+      children: [
+        Center(
+          child: _controller.value.isInitialized
+              ? AspectRatio(
+                  aspectRatio: _controller.value.aspectRatio,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: VideoPlayer(_controller),
+                  ),
+                )
+              : Container(),
+        ),
+        Positioned(
+          top: 150,
+          right: 250,
+          child: FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                _controller.value.isPlaying
+                    ? _controller.pause()
+                    : _controller.play();
+              });
+            },
+            child: Icon(
+              _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+            ),
+          ),
+        )
+      ],
+    );
   }
 
   @override

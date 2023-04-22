@@ -5,7 +5,7 @@ class AccountPage extends StatelessWidget {
 
   @override
     Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       child: Column(

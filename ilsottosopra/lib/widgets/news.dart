@@ -10,11 +10,11 @@ class News extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width,
             child: Image.asset("lib/assets/fiori.jpg",),
           ),
-          Row(
+          const Row(
             children: [
               Icon(Icons.calendar_today,color: Colors.grey,),
               Text("15 Aprile 2023", style: TextStyle(color: Colors.grey),),
@@ -23,8 +23,8 @@ class News extends StatelessWidget {
               Icon(Icons.chat_bubble_outline),
             ],
           ),
-          Text("Simone è bello", style: TextStyle(fontSize: 20),),
-          Text("niente"),
+          const Text("Simone è bello", style: TextStyle(fontSize: 20),),
+          const Text("niente"),
         ],
       ),
     );
